@@ -9,16 +9,17 @@
       font-family: Arial, sans-serif;
       background-color: #f7f7f7;
       color: #333;
-      margin: 40px;
+      margin: 20px;
       line-height: 1.6;
     }
     h1, h2 {
       text-align: center;
       color: #b22222;
+      margin-bottom: 15px;
     }
     p {
       max-width: 800px;
-      margin: 0 auto 30px;
+      margin: 0 auto 25px;
       text-align: center;
       background: #fff;
       padding: 15px 20px;
@@ -29,27 +30,34 @@
       list-style-type: none;
       padding: 0;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
     li {
       display: inline-block;
       background: #fff;
-      margin: 5px 10px;
-      padding: 10px 20px;
+      margin: 5px 8px;
+      padding: 8px 15px;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-size: 0.95rem;
+    }
+    .table-container {
+      overflow-x: auto;
+      margin: 0 auto;
+      max-width: 100%;
     }
     table {
-      width: 90%;
-      margin: 20px auto;
+      width: 100%;
+      min-width: 600px;
       border-collapse: collapse;
       background: white;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     th, td {
-      padding: 12px 15px;
+      padding: 10px 12px;
       border-bottom: 1px solid #ddd;
       text-align: left;
+      font-size: 0.95rem;
     }
     th {
       background-color: #b22222;
@@ -61,15 +69,41 @@
     pre {
       background: #222;
       color: #eee;
-      padding: 20px;
+      padding: 15px;
       border-radius: 10px;
-      width: 90%;
-      margin: 20px auto;
+      width: 100%;
       overflow-x: auto;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      font-size: 0.9rem;
     }
     code {
       font-family: 'Courier New', monospace;
+    }
+    @media (max-width: 600px) {
+      body {
+        margin: 10px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      p {
+        font-size: 0.95rem;
+        padding: 10px 15px;
+      }
+      li {
+        display: block;
+        margin: 8px auto;
+        width: fit-content;
+      }
+      table {
+        min-width: 500px;
+      }
+      pre {
+        font-size: 0.8rem;
+      }
     }
   </style>
 </head>
@@ -93,40 +127,42 @@
     <li>Elodie</li>
   </ul>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Traitor</th>
-        <th>Age</th>
-        <th>Job</th>
-        <th>Contestant</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Alan Carr</td><td>48</td><td>Comedian & television presenter</td><td></td></tr>
-      <tr><td>Cat Burns</td><td>25</td><td>Singer-songwriter</td><td></td></tr>
-      <tr><td>Celia Imrie</td><td>72</td><td>Stage & screen actress</td><td></td></tr>
-      <tr><td>Charlotte Church</td><td>39</td><td>Singer & television presenter</td><td></td></tr>
-      <tr><td>Clare Balding</td><td>54</td><td>Television presenter & journalist</td><td></td></tr>
-      <tr><td>David Olusoga</td><td>55</td><td>Historian & film-maker</td><td></td></tr>
-      <tr><td>Joe Marler</td><td>34</td><td>Former England rugby player</td><td></td></tr>
-      <tr><td>Joe Wilkinson</td><td>50</td><td>Comedian & actor</td><td></td></tr>
-      <tr><td>Jonathan Ross</td><td>64</td><td>Television presenter</td><td></td></tr>
-      <tr><td>Kate Garraway</td><td>57</td><td>Television presenter & journalist</td><td></td></tr>
-      <tr><td>Lucy Beaumont</td><td>41</td><td>Comedian</td><td></td></tr>
-      <tr><td>Mark Bonnar</td><td>56</td><td>Stage & screen actor</td><td></td></tr>
-      <tr><td>Nick Mohammed</td><td>44</td><td>Actor & comedian</td><td></td></tr>
-      <tr><td>Niko Omilana</td><td>27</td><td>Social media personality</td><td></td></tr>
-      <tr><td>Paloma Faith</td><td>43</td><td>Singer-songwriter & actress</td><td></td></tr>
-      <tr><td>Ruth Codd</td><td>28</td><td>Actress</td><td></td></tr>
-      <tr><td>Stephen Fry</td><td>67</td><td>Actor, writer & presenter</td><td></td></tr>
-      <tr><td>Tameka Empson</td><td>48</td><td>EastEnders actress</td><td></td></tr>
-      <tr><td>Tom Daley</td><td>30</td><td>Former Olympic diver</td><td></td></tr>
-    </tbody>
-  </table>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Traitor</th>
+          <th>Age</th>
+          <th>Job</th>
+          <th>Contestant</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Alan Carr</td><td>48</td><td>Comedian & television presenter</td><td></td></tr>
+        <tr><td>Cat Burns</td><td>25</td><td>Singer-songwriter</td><td></td></tr>
+        <tr><td>Celia Imrie</td><td>72</td><td>Stage & screen actress</td><td></td></tr>
+        <tr><td>Charlotte Church</td><td>39</td><td>Singer & television presenter</td><td></td></tr>
+        <tr><td>Clare Balding</td><td>54</td><td>Television presenter & journalist</td><td></td></tr>
+        <tr><td>David Olusoga</td><td>55</td><td>Historian & film-maker</td><td></td></tr>
+        <tr><td>Joe Marler</td><td>34</td><td>Former England rugby player</td><td></td></tr>
+        <tr><td>Joe Wilkinson</td><td>50</td><td>Comedian & actor</td><td></td></tr>
+        <tr><td>Jonathan Ross</td><td>64</td><td>Television presenter</td><td></td></tr>
+        <tr><td>Kate Garraway</td><td>57</td><td>Television presenter & journalist</td><td></td></tr>
+        <tr><td>Lucy Beaumont</td><td>41</td><td>Comedian</td><td></td></tr>
+        <tr><td>Mark Bonnar</td><td>56</td><td>Stage & screen actor</td><td></td></tr>
+        <tr><td>Nick Mohammed</td><td>44</td><td>Actor & comedian</td><td></td></tr>
+        <tr><td>Niko Omilana</td><td>27</td><td>Social media personality</td><td></td></tr>
+        <tr><td>Paloma Faith</td><td>43</td><td>Singer-songwriter & actress</td><td></td></tr>
+        <tr><td>Ruth Codd</td><td>28</td><td>Actress</td><td></td></tr>
+        <tr><td>Stephen Fry</td><td>67</td><td>Actor, writer & presenter</td><td></td></tr>
+        <tr><td>Tameka Empson</td><td>48</td><td>EastEnders actress</td><td></td></tr>
+        <tr><td>Tom Daley</td><td>30</td><td>Former Olympic diver</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <h2>Pairing Code</h2>
-  <p style="text-align:center;">This Python script will randomly assign each contestant to a celebrity traitor. It will be run once prior to the progam starting on Wednesday 8th October 2025 at 9pm</p>
+  <p style="text-align:center;">This Python script will randomly assign each contestant to a celebrity traitor.</p>
 
   <pre><code>
 import pandas as pd
