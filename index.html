@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celebrity Traitors Sweep Stake</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #b22222;
+    }
+    p {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      text-align: center;
+      background: #fff;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    li {
+      display: inline-block;
+      background: #fff;
+      margin: 5px 10px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #b22222;
+      color: white;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    pre {
+      background: #222;
+      color: #eee;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      margin: 20px auto;
+      overflow-x: auto;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    code {
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Celebrity Traitors Sweep Stake</h1>
+
+  <h2>Rules</h2>
+  <p>
+    This <em>Celebrity Traitors</em> sweepstake is just for fun!  
+    We need 19 players — one for each celebrity traitor.  
+    Each player contributes a £1 entry fee to create a £19 prize pot.  
+    When the show concludes, the contestant whose celebrity traitor wins will take the full pot.  
+    If more than one celebrity traitor wins, the £19 prize will be split equally among the matching contestants.
+  </p>
+
+  <h2>Current Contestants</h2>
+  <ul>
+    <li>Andy</li>
+    <li>Catherine</li>
+    <li>Elodie</li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Traitor</th>
+        <th>Age</th>
+        <th>Job</th>
+        <th>Contestant</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Alan Carr</td><td>48</td><td>Comedian & television presenter</td><td></td></tr>
+      <tr><td>Cat Burns</td><td>25</td><td>Singer-songwriter</td><td></td></tr>
+      <tr><td>Celia Imrie</td><td>72</td><td>Stage & screen actress</td><td></td></tr>
+      <tr><td>Charlotte Church</td><td>39</td><td>Singer & television presenter</td><td></td></tr>
+      <tr><td>Clare Balding</td><td>54</td><td>Television presenter & journalist</td><td></td></tr>
+      <tr><td>David Olusoga</td><td>55</td><td>Historian & film-maker</td><td></td></tr>
+      <tr><td>Joe Marler</td><td>34</td><td>Former England rugby player</td><td></td></tr>
+      <tr><td>Joe Wilkinson</td><td>50</td><td>Comedian & actor</td><td></td></tr>
+      <tr><td>Jonathan Ross</td><td>64</td><td>Television presenter</td><td></td></tr>
+      <tr><td>Kate Garraway</td><td>57</td><td>Television presenter & journalist</td><td></td></tr>
+      <tr><td>Lucy Beaumont</td><td>41</td><td>Comedian</td><td></td></tr>
+      <tr><td>Mark Bonnar</td><td>56</td><td>Stage & screen actor</td><td></td></tr>
+      <tr><td>Nick Mohammed</td><td>44</td><td>Actor & comedian</td><td></td></tr>
+      <tr><td>Niko Omilana</td><td>27</td><td>Social media personality</td><td></td></tr>
+      <tr><td>Paloma Faith</td><td>43</td><td>Singer-songwriter & actress</td><td></td></tr>
+      <tr><td>Ruth Codd</td><td>28</td><td>Actress</td><td></td></tr>
+      <tr><td>Stephen Fry</td><td>67</td><td>Actor, writer & presenter</td><td></td></tr>
+      <tr><td>Tameka Empson</td><td>48</td><td>EastEnders actress</td><td></td></tr>
+      <tr><td>Tom Daley</td><td>30</td><td>Former Olympic diver</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Pairing Code</h2>
+  <p style="text-align:center;">This Python script will randomly assign each contestant to a celebrity traitor. It will be run once prior to the progam starting on Wednesday 8th October 2025 at 9pm</p>
+
+  <pre><code>
+import pandas as pd
+from random import shuffle
+
+# read a list of the celebrity traitors into a dataframe
+traitors_df = pd.read_csv(r'celeb_traitors.csv')
+
+# extract the traitor name as a list
+names = traitors_df['traitor'].tolist()
+# shuffle the names so order is random
+shuffle(names)
+
+# create a list of friends ['Andy', 'Catherine', 'Elodie'...] that matches length of traitors (19)
+friends = [i for i in range(19)]  # placeholder just numbers at present
+# shuffle the friends so order is random
+shuffle(friends)
+
+# create the pairings with zip
+pairings = zip(friends, names)
+# iterate over zip object as it's a generator (could be converted to list)
+for pair in pairings:
+    print(pair)
+  </code></pre>
+
+</body>
+</html>
