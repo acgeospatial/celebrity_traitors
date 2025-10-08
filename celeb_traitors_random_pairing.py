@@ -10,7 +10,8 @@ names = traitors_df['traitor'].tolist()
 shuffle(names)
 
 # create a list of friends ['Andy', 'Catherine', 'Elodie'...] that matches length of traitors (19)
-friends = [i for i in range(19)] # place holder just numbers at present
+friends = ['Elodie', 'Abi', 'Jess', 'Charlie', 'Theo', 'Sue', 'Evie', 'G', 'Phil', 'Louise', 'Alfie', 'Tom', 'Daisy', 'Hetty', 'Wilfred', 'Chris', 'Emma', 'Zoe', 'Iris'] # place holder just numbers at present
+print(len(friends))
 # shuffle the friends so order is random
 shuffle(friends)
 
