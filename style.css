@@ -1,0 +1,225 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #b22222;
+  margin-bottom: 15px;
+}
+
+p {
+  max-width: 800px;
+  margin: 0 auto 25px;
+  text-align: center;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Contestant Grid */
+.contestant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.card {
+  background: #fff;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Table Styling */
+.table-container {
+  overflow-x: auto;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+th {
+  background-color: #b22222;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Code block */
+pre {
+  background: #222;
+  color: #eee;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  overflow-x: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  font-size: 0.9rem;
+}
+
+code {
+  font-family: 'Courier New', monospace;
+}
+
+/* 🎯 Bingo Section */
+.bingo-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto 20px;
+}
+
+.bingo-card {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  max-width: 700px;
+  background: #b22222;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.bingo-square {
+  background: #fff;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.bingo-square:hover {
+  background: #f7f7f7;
+  transform: scale(1.03);
+}
+
+.bingo-square.marked {
+  background: #b22222;
+  color: #fff;
+  text-decoration: line-through;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* FREE SPACE */
+.bingo-square:nth-child(13) {
+  background: #b22222;
+  color: #fff;
+  font-style: italic;
+  text-decoration: none;
+}
+
+/* Shuffle Button */
+#shuffleButton {
+  background: #b22222;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+#shuffleButton:hover {
+  background: #d42d2d;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    margin: 10px;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 0.95rem;
+    padding: 10px 15px;
+  }
+  table {
+    min-width: 500px;
+  }
+  pre {
+    font-size: 0.8rem;
+  }
+  .bingo-square {
+    font-size: 0.8rem;
+    padding: 12px 8px;
+  }
+}
+/* ✍️ Editorial-style Prelude */
+.prelude {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  padding: 15px 20px;
+  border-left: 3px solid #b22222;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.prelude h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  color: #b22222;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.prelude p {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #333;
+  margin-bottom: 0.8em;
+}
+
+.prelude .footnotes {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 5px;
+}
