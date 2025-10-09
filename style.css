@@ -223,3 +223,11 @@ code {
   color: #666;
   margin-top: 5px;
 }
+/* Row color coding */
+.traitor {
+  background-color: #fff7a5; /* soft yellow for traitors */
+}
+
+tbody tr:not(.traitor) {
+  background-color: #fceaea; /* light burgundy/pink for faithful */
+}
