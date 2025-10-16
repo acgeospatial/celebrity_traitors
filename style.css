@@ -228,6 +228,11 @@ code {
   background-color: #fff7a5; /* soft yellow for traitors */
 }
 
+.banished {
+  background-color: #666;
+}
+
 tbody tr:not(.traitor) {
   background-color: #fceaea; /* light burgundy/pink for faithful */
 }
+
