@@ -232,7 +232,7 @@ code {
   background-color: #666;
 }
 
-tbody tr:not(.traitor) {
+.player {
   background-color: #fceaea; /* light burgundy/pink for faithful */
 }
 
