@@ -215,6 +215,7 @@ code {
   line-height: 1.55;
   color: #333;
   margin-bottom: 0.8em;
+  text-align: justify;
 }
 
 .prelude .footnotes {
