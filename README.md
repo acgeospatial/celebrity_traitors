@@ -6,4 +6,3 @@ Random draw took place on 8th October 2025 at 14:53. See [The Draw](https://gith
 
 Free to reuse MIT license
 
-updated 27th Oct
